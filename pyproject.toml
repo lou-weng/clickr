@@ -6,10 +6,15 @@ authors = ["louie <louieweng@outlook.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.8.10"
 Flask = "^2.2.2"
 boto3 = "^1.26.23"
 
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.15.8"
+flake8 = "^6.0.0"
+isort = "^5.10.1"
 
 [build-system]
 requires = ["poetry-core"]
