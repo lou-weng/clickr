@@ -1,0 +1,25 @@
+name: execute linters and tests
+on: pull_request 
+
+jobs:
+  ci-backend: 
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./clickr
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.8.10
+
+      - name: Setup Poetry
+        uses: abatilo/actions-poetry@v2
+
+      - name: Install Dependencies
+        run: poetry install
+
+      - name: Run Linters
+        run: make lint-all
