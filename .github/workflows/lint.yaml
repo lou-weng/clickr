@@ -28,4 +28,4 @@ jobs:
         run: poetry install
 
       - name: Run Linters
-        run: pwd && ls && make lint-all
+        run: (cd .. && make lint-all)
