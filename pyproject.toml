@@ -6,15 +6,18 @@ authors = ["louie <louieweng@outlook.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.8.10"
+python = "^3.10"
 Flask = "^2.2.2"
 boto3 = "^1.26.23"
+python-dotenv = "^0.21.0"
 
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^2.15.8"
 flake8 = "^6.0.0"
 isort = "^5.10.1"
+mypy-boto3-dynamodb = "<=1.26.30"
+boto3-stubs = {version = "1.26.30", extras = ["dynamodb"]}
 
 [build-system]
 requires = ["poetry-core"]
