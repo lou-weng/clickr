@@ -46,5 +46,6 @@ def increment_click():
         }
     )
 
+
 if __name__ == "__main__":
     app.run(debug=False)
