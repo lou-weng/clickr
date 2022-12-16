@@ -45,3 +45,6 @@ def increment_click():
             'project_instance': PROJECT_INSTANCE
         }
     )
+
+if __name__ == "__main__":
+    app.run(debug=False)
